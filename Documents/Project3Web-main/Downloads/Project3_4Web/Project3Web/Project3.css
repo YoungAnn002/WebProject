@@ -1,0 +1,215 @@
+html{
+    background-color:darkolivegreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18pt;
+}
+#div-container div{
+    text-align: left;
+}
+#div-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 175px max-content 100px;
+    grid-template-areas:
+    "head"
+    "image"
+    "vid";
+}
+#div-container img{
+    border: 4px dashed darkcyan;
+}
+#red{
+    background-color:darkgreen;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+#red header{
+    grid-column: 1/4;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+.blue{
+    background-color:rgb(115, 143, 115);
+    grid-area: image;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.orange{
+    background-color:rgb(32, 53, 53);
+    color: white;
+    grid-area: vid;
+    padding: 20px;
+}
+nav{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+button{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 18pt;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button:hover{
+    background-color:forestgreen;
+}
+.earth{
+    width: 40px;
+    display: inline-block;
+}
+.blue img{
+    box-sizing: border-box;
+}
+.orange a{
+    color:cyan;
+}
+.help{
+    grid-column: 1/3;
+    padding: 20px;
+}
+iframe{
+    grid-column: 1/3;
+    justify-self: center;
+}
+#first{
+    order: 1;
+}
+#second{
+    order: 2;
+    justify-self: right;
+}
+
+#animalMainDiv{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 175px max-content 100px;
+    grid-template-areas:
+    "head"
+    "image"
+    "vid";
+}
+figure {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    margin: 20px;
+    border: 4px dashed darkcyan;
+}
+figcaption {
+    background-color:darkseagreen;
+    color: black;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+#contactUsMainDiv {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 175px max-content 100px;
+    grid-template-areas:
+    "head"
+    "image"
+    "vid";
+}
+h1 {
+    grid-column: 1/3;
+    padding: 50px;
+}
+#contactUsMainDiv img{
+    justify-self: center;
+}
+@media screen and (max-width: 875px){
+    #div-container .blue{
+        background-color:rgb(115, 143, 115);
+        grid-area: image;
+        display:grid;
+        grid-template-columns: min-content;
+        grid-template-areas:
+        "head"
+        "tiger"
+        "tigerF"
+        "vid"
+        "Rhino"
+        "RhinoF";
+    }
+    figure {
+        display: flex;
+        flex-flow: column;
+        width: 400px;
+        height: min-content;
+        margin: 20px;
+        border: 4px dashed darkcyan;
+    }
+    figcaption {
+        background-color:darkseagreen;
+        color: black;
+        font: italic smaller sans-serif;
+        padding: 3px;
+        text-align: center;
+    }
+    #tiger{
+        grid-area: tiger;
+        justify-self: center;
+    }
+    #tigerFacts{
+        grid-area: tigerF;
+    }
+    .help{
+        padding: 20px;
+        grid-area: head;
+    }
+    iframe{
+        grid-area: vid;
+    }
+    #second{
+        grid-area: Rhino;
+        justify-self: center;
+    }
+    #first{
+        grid-area: RhinoF;
+    }
+
+    #animalMainDiv .blue{
+        background-color:rgb(115, 143, 115);
+        grid-area: image;
+        display:grid;
+        grid-template-columns: 500px;
+        grid-template-areas:
+        "head2"
+        "tiger2"
+        "tigerF2"
+        "rihno2"
+        "rhinoF2"
+        "orang2"
+        "orangF2";
+        justify-content: center;
+    }
+    #head2{
+        grid-area: head2;
+    }
+    #tiger2{
+        grid-area: tiger2;
+    }
+    #tigerF{
+        grid-area: tigerF2;
+    }
+    #rhino2{
+        grid-area: rhino2;
+    }
+    #rhinoF{
+        grid-area: rhinoF2;
+    }
+    #orangutan2{
+        grid-area: orang2;
+    }
+    #orangutanF{
+        grid-area: orangF2;
+    }
+}

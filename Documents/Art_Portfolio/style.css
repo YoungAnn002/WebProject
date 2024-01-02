@@ -1,0 +1,88 @@
+body{
+    font-family:"Varela Round";
+}
+h1{
+    font-size: 36pt;
+    text-align: center;
+    text-shadow: 5px 5px rgb(126, 185, 196);
+}
+a{
+    color:aquamarine;
+}
+#theHeader{
+    background-color:rgb(163, 226, 237);
+    z-index: 3;
+    height:130px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+}
+.main{
+    display:grid;
+    column-gap: 2px;
+    row-gap:20px;
+    grid-template-columns: 50% 50%;
+    margin-top:150px;
+}
+.side{
+    background-color:rgb(120, 252, 252);
+    text-align: center;
+    aspect-ratio: 2;
+    border-radius: 10px;
+    font-size:18pt;
+}
+.small{
+    margin:20px;
+    padding: 30px;
+    height:90%;
+    border-radius:50px;
+    background-color: black;
+    color:white;
+    
+}
+.pic{
+    margin:20px;
+    height: 90%;
+    padding: 30px;
+    border-radius:50px;
+    background-color:coral;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:relative;
+    align-content: center;
+}
+.pic:hover{
+    opacity: .6;
+}
+.overlay{
+    margin:50px;
+    height: 200px;
+    width: 200px;
+    left:25%;
+    background-color: rgb(28, 90, 54);
+    color:white;
+    position:absolute;
+    z-index: 9;
+    transform:rotate(45deg);
+    text-align: center;
+    display:none;
+}
+.pic:hover div{
+    display:table-cell;
+}
+.inside{
+    display: table-cell;
+    transform:rotate(-45deg);
+    vertical-align: middle;
+    height:200px;
+    width:200px;
+}
+html{
+    background: url(https://i.pinimg.com/originals/b2/e1/31/b2e1317474e76a36216d3163a7304562.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

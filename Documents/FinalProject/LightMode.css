@@ -1,0 +1,139 @@
+html{
+    background-image: url('LightBack.jpg');
+    background-image: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+#red{
+    background-color: rgb(160, 250, 86);
+    display: flex;
+    flex-flow: column;
+    z-index: 3;
+}
+button:hover{
+    background-color: rgb(59, 161, 76);
+}
+.blue{
+    background-color: rgb(177, 233, 177);
+}
+iframe{
+    background-color: rgb(74, 204, 96);
+}
+#div-container img{
+    border: 6px dashed rgb(74, 204, 96);
+}
+.help{
+    background-color: rgb(87, 230, 87);
+}
+.orange{
+    background-color: rgb(35, 97, 35);
+}
+.orange a{
+    color:rgb(191, 250, 103);
+}
+.animation{
+    display:block;
+    grid-column: 1/3;
+    background-color:lightgreen;
+}
+.animation img{
+    width: 200px;
+}
+#secondTree{
+    position:relative;
+    float:right;
+    z-index: 2;
+}
+#firstTree{
+    position:relative;
+    float:left;
+    z-index: 2;
+}
+#monkey{
+    position:absolute;
+    right: 100px;
+    margin-top: 150px;
+    z-index: 3;
+    animation: monkeyMove 3s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes monkeyMove{
+    0%{right: 100px}
+    100%{right:700px}
+}
+
+figure {
+    border: 4px dashed darkcyan;
+}
+figcaption {
+    background-color:darkseagreen;
+    color: black;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+@media screen and (max-width: 875px){
+    #div-container{
+        margin:auto;
+    }
+    .animation{
+        display: none;
+    }
+    #div-container .blue{
+        background-color:rgb(177, 233, 177);
+        grid-area: image;
+        
+    }
+    #tiger{
+        grid-area: tiger;
+    }
+    #tigerFacts{
+        grid-area: tigerF;
+    }
+    .help{
+        padding: 20px;
+        grid-area: head;
+        grid-column: 1/2;
+    }
+    iframe{
+        grid-area: vid;
+    }
+    #second{
+        grid-area: Rhino;
+    }
+    #first{
+        grid-area: RhinoF;
+        margin-left: 0px;
+    }
+
+    #animalMainDiv .blue{
+        background-color:rgb(177, 233, 177);
+        grid-area: image;
+        justify-content: center;
+    }
+    #head2{
+        grid-area: head2;
+    }
+    #tiger2{
+        grid-area: tiger2;
+    }
+    #tigerF{
+        grid-area: tigerF2;
+    }
+    #rhino2{
+        grid-area: rhino2;
+    }
+    #rhinoF{
+        grid-area: rhinoF2;
+    }
+    #orangutan2{
+        grid-area: orang2;
+    }
+    #orangutanF{
+        grid-area: orangF2;
+    }
+}
