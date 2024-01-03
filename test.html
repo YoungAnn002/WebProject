@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monkey and Trees</title>
+<style>
+  .container {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .tree {
+    display: inline-block;
+    max-width: 50%;
+    height: auto;
+    vertical-align: top;
+  }
+  .monkey {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: left 1s;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree-1024x681.jpg" class="tree" id="tree1">
+  <img src="https://www.gardeningknowhow.com/wp-content/uploads/2017/07/hardwood-tree-1024x681.jpg" class="tree" id="tree2">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpPigpvPdMyOxlG4t5K7P794NSDwUAokFwOg&usqp=CAU" class="monkey" id="monkey">
+</div>
+
+</body>
+<script>
+  document.getElementById("monkey").addEventListener("click", function() {
+    const monkey = document.getElementById("monkey");
+    const tree1 = document.getElementById("tree1");
+    const tree2 = document.getElementById("tree2");
+
+    if (monkey.style.left === "0px" || monkey.style.left === "") {
+      monkey.style.left = tree1.offsetWidth + "px";
+    } else {
+      monkey.style.left = "0px";
+    }
+  });
+</script>
+</html>
